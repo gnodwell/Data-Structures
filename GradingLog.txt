@@ -1,0 +1,134 @@
+Found bandb.c
+Compiling
+Found bandb.o
+Compilation succeeded
+Compiling and linking grade_getbytes
+Missing grade_getbytes
+Compilation generated errors:
+/usr/bin/ld: bandb.o: in function `getbytes':
+bandb.c:(.text+0x0): multiple definition of `getbytes'; /tmp/ccYelmP6.o:grade_getbytes.c:(.text+0x0): first defined here
+/usr/bin/ld: bandb.o: in function `main':
+bandb.c:(.text+0x9d): multiple definition of `main'; /tmp/ccYelmP6.o:grade_getbytes.c:(.text+0x9d): first defined here
+collect2: error: ld returned 1 exit status
+
+getbytes - copy first 8 characters failed
+  ''!='abcdefgh'
+getbytes - reverse first 8 characters failed
+  ''!='hgfedcba'
+getbytes - reverse 9 characters failed
+  ''!='good_work'
+Compiling and linking grade_getbits
+Missing grade_getbits
+Compilation generated errors:
+/home/socs/Grading/Graders/grade_getbits.c: In function ‘main’:
+/home/socs/Grading/Graders/grade_getbits.c:18:2: warning: implicit declaration of function ‘getbits’; did you mean ‘getbytes’? [-Wimplicit-function-declaration]
+  getbits( dest, bytes, src, start, end );
+  ^~~~~~~
+  getbytes
+/usr/bin/ld: bandb.o: in function `getbytes':
+bandb.c:(.text+0x0): multiple definition of `getbytes'; /tmp/ccGD5tY8.o:grade_getbits.c:(.text+0x0): first defined here
+/usr/bin/ld: bandb.o: in function `main':
+bandb.c:(.text+0x9d): multiple definition of `main'; /tmp/ccGD5tY8.o:grade_getbits.c:(.text+0x9d): first defined here
+/usr/bin/ld: /tmp/ccGD5tY8.o: in function `main':
+grade_getbits.c:(.text+0x12e): undefined reference to `getbits'
+collect2: error: ld returned 1 exit status
+
+getbits - get 8 bits from char failed
+  ''!='01100001'
+getbits - get 5 bits from char failed
+  ''!='10000'
+getbits - get 16 bits crossing byte boundary failed
+  ''!='0001011000100110'
+Compiling and linking grade_bits2ull
+Missing grade_bits2ull
+Compilation generated errors:
+/home/socs/Grading/Graders/grade_bits2ull.c: In function ‘main’:
+/home/socs/Grading/Graders/grade_bits2ull.c:5:18: warning: implicit declaration of function ‘bits2ull’ [-Wimplicit-function-declaration]
+  printf( "%llu", bits2ull( argv[1] ) );
+                  ^~~~~~~~
+/home/socs/Grading/Graders/grade_bits2ull.c:5:14: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 2 has type ‘int’ [-Wformat=]
+  printf( "%llu", bits2ull( argv[1] ) );
+           ~~~^   ~~~~~~~~~~~~~~~~~~~
+           %u
+/usr/bin/ld: bandb.o: in function `getbytes':
+bandb.c:(.text+0x0): multiple definition of `getbytes'; /tmp/ccgQ5Hqd.o:grade_bits2ull.c:(.text+0x0): first defined here
+/usr/bin/ld: bandb.o: in function `main':
+bandb.c:(.text+0x9d): multiple definition of `main'; /tmp/ccgQ5Hqd.o:grade_bits2ull.c:(.text+0x9d): first defined here
+/usr/bin/ld: /tmp/ccgQ5Hqd.o: in function `main':
+grade_bits2ull.c:(.text+0xc0): undefined reference to `bits2ull'
+collect2: error: ld returned 1 exit status
+
+bits2ull("11010010") failed
+  ''!='210'
+bits2ull( 64 1s ) failed
+  ''!='18446744073709551615'
+bits2ull( 64 0s ) failed
+  ''!='0'
+Compiling and linking grade_bits2ll
+Missing grade_bits2ll
+Compilation generated errors:
+/home/socs/Grading/Graders/grade_bits2ll.c: In function ‘main’:
+/home/socs/Grading/Graders/grade_bits2ll.c:5:18: warning: implicit declaration of function ‘bits2ll’ [-Wimplicit-function-declaration]
+  printf( "%lld", bits2ll( argv[1] ) );
+                  ^~~~~~~
+/home/socs/Grading/Graders/grade_bits2ll.c:5:14: warning: format ‘%lld’ expects argument of type ‘long long int’, but argument 2 has type ‘int’ [-Wformat=]
+  printf( "%lld", bits2ll( argv[1] ) );
+           ~~~^   ~~~~~~~~~~~~~~~~~~
+           %d
+/usr/bin/ld: bandb.o: in function `getbytes':
+bandb.c:(.text+0x0): multiple definition of `getbytes'; /tmp/ccQsx25j.o:grade_bits2ll.c:(.text+0x0): first defined here
+/usr/bin/ld: bandb.o: in function `main':
+bandb.c:(.text+0x9d): multiple definition of `main'; /tmp/ccQsx25j.o:grade_bits2ll.c:(.text+0x9d): first defined here
+/usr/bin/ld: /tmp/ccQsx25j.o: in function `main':
+grade_bits2ll.c:(.text+0xc0): undefined reference to `bits2ll'
+collect2: error: ld returned 1 exit status
+
+bits2ll("11010010") failed
+  ''!='-46'
+bits2ll( 64 1s ) failed
+  ''!='-1'
+bits2ll( 64 0s ) failed
+  ''!='0'
+Compiling and linking grade_spff
+Missing grade_spff
+Compilation generated errors:
+/home/socs/Grading/Graders/grade_spff.c: In function ‘main’:
+/home/socs/Grading/Graders/grade_spff.c:11:2: warning: implicit declaration of function ‘spff’ [-Wimplicit-function-declaration]
+  spff( sign, exponent, signficand, &x );
+  ^~~~
+/usr/bin/ld: bandb.o: in function `getbytes':
+bandb.c:(.text+0x0): multiple definition of `getbytes'; /tmp/ccmli2gp.o:grade_spff.c:(.text+0x0): first defined here
+/usr/bin/ld: bandb.o: in function `main':
+bandb.c:(.text+0x9d): multiple definition of `main'; /tmp/ccmli2gp.o:grade_spff.c:(.text+0x9d): first defined here
+/usr/bin/ld: /tmp/ccmli2gp.o: in function `main':
+grade_spff.c:(.text+0xe1): undefined reference to `spff'
+collect2: error: ld returned 1 exit status
+
+spff(0.15625) failed
+  ''!='0 01111100 01000000000000000000000'
+spff(-12.5) failed
+  ''!='1 10000010 10010000000000000000000'
+Compiling and linking grade_dpff
+Missing grade_dpff
+Compilation generated errors:
+/home/socs/Grading/Graders/grade_dpff.c: In function ‘main’:
+/home/socs/Grading/Graders/grade_dpff.c:12:2: warning: implicit declaration of function ‘dpff’ [-Wimplicit-function-declaration]
+  dpff( sign, exponent, signficand, &x );
+  ^~~~
+/usr/bin/ld: bandb.o: in function `getbytes':
+bandb.c:(.text+0x0): multiple definition of `getbytes'; /tmp/ccJ0SGKh.o:grade_dpff.c:(.text+0x0): first defined here
+/usr/bin/ld: bandb.o: in function `main':
+bandb.c:(.text+0x9d): multiple definition of `main'; /tmp/ccJ0SGKh.o:grade_dpff.c:(.text+0x9d): first defined here
+/usr/bin/ld: /tmp/ccJ0SGKh.o: in function `main':
+grade_dpff.c:(.text+0xe8): undefined reference to `dpff'
+collect2: error: ld returned 1 exit status
+
+dpff(0.15625) failed
+  ''!='0 01111111100 0100000000000000000000000000000000000000000000000000'
+dpff(-12.1) failed
+  ''!='1 10000000010 1000001100110011001100110011001100110011001100110011'
+Found makefile
+Correct options
+No comments
+Indentation levels are: ['', '    ']
+Assignment submitted at: Tue Sep 22 23:03:07 2020

@@ -1,0 +1,22 @@
+ 1                 getbytes - copy first 8 characters: 0
+ 2              getbytes - reverse first 8 characters: 0
+ 3                    getbytes - reverse 9 characters: 0
+ 4                     getbits - get 8 bits from char: 0
+ 5                     getbits - get 5 bits from char: 0
+ 6       getbits - get 16 bits crossing byte boundary: 0
+ 7                               bits2ull("11010010"): 0
+ 8                                  bits2ull( 64 1s ): 0
+ 9                                  bits2ull( 64 0s ): 0
+10                                bits2ll("11010010"): 0
+11                                   bits2ll( 64 1s ): 0
+12                                   bits2ll( 64 0s ): 0
+13                                      spff(0.15625): 0
+14                                        spff(-12.5): 0
+15                                      dpff(0.15625): 0
+16                                        dpff(-12.1): 0
+17                                    makefile exists 1
+18                           correct makefile options 1
+19                               code has no comments 0
+20                               code is not indented 0
+=======================================================
+Total:                                             2/20

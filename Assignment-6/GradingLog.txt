@@ -1,0 +1,78 @@
+Compiling all executables
+    Found buildidx
+    Found key2val
+    Found val2key
+    Missing actors
+    Missing bacon1
+Compilation generated errors:
+actors.c:1: warning: ISO C forbids an empty translation unit [-Wpedantic]
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+bacon1.c:1: warning: ISO C forbids an empty translation unit [-Wpedantic]
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+
+Building indexes
+    ./buildidx tb.kv 10000
+    Found tb.khs
+    Found tb.vhs
+    ./buildidx nb.kv 10000
+    Found nb.khs
+    Found nb.vhs
+    ./buildidx tp.kv 10000
+    Found tp.khs
+    Found tp.vhs
+Compiling and linking gradeA6_buildidx
+Found gradeA6_buildidx
+Compilation succeeded
+buildidx nb.khs 3383 failed
+  '-1\n'!='1\n'
+buildidx nb.vhs 1274 failed
+  '-1\n'!='1\n'
+buildidx nb.khs 3384 failed
+  '-1\n'!='165\n'
+buildidx nb.vhs 2559 failed
+  '-1\n'!='249\n'
+buildidx tb.khs 8661 failed
+  '-1\n'!='1\n'
+buildidx tb.vhs 1152 failed
+  '-1\n'!='1\n'
+buildidx tp.khs 8102 failed
+  '-1\n'!='9\n'
+buildidx bp.vhs 294 failed
+  '-1\n'!='9\n'
+Compiling and linking key2val
+Found key2val
+Compilation succeeded
+key2val nb.kv nm0000102 passed
+key2val tb.kv tt0100814 passed
+Compiling and linking val2key
+Found val2key
+Compilation succeeded
+val2key nb.kv 'Demi Moore' passed
+val2key tb.kv 'A Few Good Men' passed
+Compiling and linking actors
+Missing actors
+Compilation succeeded
+actors Tremors = Gross failed
+  ERROR: sh: 1: ./actors: not found
+  ''!='Michael Gross\n'
+actors Tremors = Ward failed
+  ERROR: sh: 1: ./actors: not found
+  ''!='Fred Ward\n'
+Compiling and linking bacon1
+Missing bacon1
+Compilation succeeded
+bacon1 'Michael Gross' failed
+  ERROR: sh: 1: ./bacon1: not found
+  ''!='Tremors\n'
+bacon1 'Steve Golin' failed
+  ERROR: sh: 1: ./bacon1: not found
+  ''!='Sleepers\n'
+Found makefile
+Incorrect options
+Comments
+Indentation levels are: ['', '    ', '        ', '            ', '                ', '                    ']
+Assignment submitted by Gavin Nodwell <gnodwell@fred.socs.uoguelph.ca> at: Thu Nov 19 21:58:25 2020

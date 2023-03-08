@@ -1,0 +1,2 @@
+This code will complie and work properly with show_node and count_nodes
+For some reason when i try running this with alphatoe it enters an infinite print loop, this could be due to not having done the last 20%

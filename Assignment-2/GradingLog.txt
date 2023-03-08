@@ -1,0 +1,98 @@
+Found array.c
+Compiling
+Found array.o
+Compilation succeeded
+Compiling and linking grade_newPerformance
+Found grade_newPerformance
+Compilation succeeded
+newPerformance passed
+Compiling and linking grade_newArray
+Found grade_newArray
+Compilation succeeded
+newArray passed
+Compiling and linking grade_contract
+Found grade_contract
+Compilation succeeded
+contract passed
+contract (books) passed
+Compiling and linking grade_freeArray
+Found grade_freeArray
+Compilation succeeded
+freeArray + mem check passed
+Compiling and linking grade_readItem
+Found grade_readItem
+Compilation succeeded
+readItem (car list) passed
+readItem (book list) passed
+Compiling and linking grade_writeItem
+Found grade_writeItem
+Compilation succeeded
+writeItem (car list) passed
+writeItem (book list) passed
+Compiling and linking grade_prependItem
+Found grade_prependItem
+Compilation succeeded
+prependItem (car list) passed
+prependItem (book list) failed
+  ERROR: error during readItem
+  ''!='City-Of-Bones:Cassandra-Clare:1\n'
+Compiling and linking grade_appendItem
+Found grade_appendItem
+Compilation succeeded
+appendItem (car list) passed
+appendItem (book list) passed
+Compiling and linking grade_insertItem
+Found grade_insertItem
+Compilation succeeded
+insertItem (car list) failed
+  'vw:golf:9:4\n'!='vw:golf:7:4\n'
+insertItem (book list) failed
+  'City-Of-Bones:Cassandra-Clare:41:27\n'!='City-Of-Bones:Cassandra-Clare:39:27\n'
+Compiling and linking grade_deleteItem
+Found grade_deleteItem
+Compilation succeeded
+deleteItem (car list) passed
+deleteItem (book list) passed
+Compiling and linking grade_findItem
+Missing grade_findItem
+Compilation generated errors:
+/home/socs/Grading/Graders/grade_findItem.c: In function ‘main’:
+/home/socs/Grading/Graders/grade_findItem.c:70:13: warning: implicit declaration of function ‘findItem’; did you mean ‘readItem’? [-Wimplicit-function-declaration]
+       fnd = findItem( perf, arr, &cmp2, search );
+             ^~~~~~~~
+             readItem
+/usr/bin/ld: /tmp/ccS0sNTp.o: in function `main':
+grade_findItem.c:(.text+0x281): undefined reference to `findItem'
+/usr/bin/ld: grade_findItem.c:(.text+0x3e9): undefined reference to `findItem'
+collect2: error: ld returned 1 exit status
+
+findItem (car list) failed
+  ERROR: valgrind: ./grade_findItem: No such file or directory
+  ''!='1\n'
+findItem (book list) failed
+  ERROR: sh: 1: ./grade_findItem: not found
+  ''!='6\n'
+Compiling and linking grade_searchItem
+Missing grade_searchItem
+Compilation generated errors:
+/home/socs/Grading/Graders/grade_searchItem.c: In function ‘main’:
+/home/socs/Grading/Graders/grade_searchItem.c:70:13: warning: implicit declaration of function ‘searchItem’; did you mean ‘readItem’? [-Wimplicit-function-declaration]
+       fnd = searchItem( perf, arr, &cmp2, search );
+             ^~~~~~~~~~
+             readItem
+/usr/bin/ld: /tmp/cc0CHVFt.o: in function `main':
+grade_searchItem.c:(.text+0x281): undefined reference to `searchItem'
+/usr/bin/ld: grade_searchItem.c:(.text+0x3e9): undefined reference to `searchItem'
+collect2: error: ld returned 1 exit status
+
+searchItem (car list) failed
+  ERROR: sh: 1: ./grade_searchItem: not found
+  ''!='1:1\n'
+searchItem (book list) failed
+  ERROR: sh: 1: ./grade_searchItem: not found
+  ''!='6:1\n'
+Found makefile
+Correct options
+Comments
+Indentation levels are: ['', '    ', '        ']
+Assignment submitted by Gavin Nodwell <gnodwell@uoguelph.ca> at: Thu Oct 1 21:25:25 2020
